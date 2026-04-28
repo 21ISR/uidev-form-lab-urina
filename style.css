@@ -12,7 +12,7 @@ body {
     align-items: center;
     font-family: 'Poppins';
     color: #4a5568;
-    background: #c3cfe2;
+    background: #d3def1;
 }
 
 header {
@@ -136,7 +136,7 @@ input:focus {
 }
 
 svg {
-    width: 40px;
+    width: 45px;
     height: 40px;
 }
 
@@ -151,4 +151,12 @@ svg {
     color: #3498db;
     text-decoration: none;
     font-weight: 500;
-} 
+}
+
+.gyli {
+    border-radius: 100%;
+    background-color: #eaecff;
+    /* border: 2px; */
+    border-color: #000000;
+    color: #333;
+}
