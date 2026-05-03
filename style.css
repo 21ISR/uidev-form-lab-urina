@@ -34,10 +34,12 @@ header p {
     font-weight: 200;
 }
 
-.login-container {
+.login-container,
+.registration-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 60px;
 }
 
 main {
@@ -45,7 +47,6 @@ main {
     border-radius: 10px;
     box-shadow: 0px 6px 8px  rgba(0, 0, 0, 0.2);
     width: 380px;
-    
 }
 
 form {
@@ -60,7 +61,8 @@ form {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+select {
     width: 100%;
     padding: 14px 14px;
     border: 1px solid #ccc;
@@ -71,9 +73,11 @@ input[type="password"] {
     font-size: 14px;
 }
 
-/* .login-check input{
-    margin-right: 5px;
-} */
+select {
+    /* appearance: auto; */
+    background-color: #eaeaea;
+    font-weight: 500;
+}
 
 .login-check {
     font-size: 14px;
@@ -81,17 +85,25 @@ input[type="password"] {
     margin: 10px 0 10px 0;
 }
 
-.login-check label {
+.registration-check {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.login-check label,
+.registration-check label {
     font-weight: 500;
 }
 
-.login-check a {
+.login-check a,
+.registration-check a {
     color: #3498db;
     text-decoration: none;
     float: right;
 }
 
-.login-btn {
+.login-btn, 
+.registration-btn {
     /* background-color: linear-gradient(to right, #, #); */
     color: #fff;
     background: #6a5acd;
@@ -103,6 +115,13 @@ input[type="password"] {
     font-weight: 500;
     border-radius: 6px;
     margin: 10px 0 10px 0;
+    transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.login-btn:hover,
+.registration-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px  rgba(0, 0, 0, 0.25);
 }
 
 input:focus {
@@ -112,7 +131,6 @@ input:focus {
 }
 
 .or {
-    /* text-align: center; */
     font-size: 14px;
     margin-top: 14px;
     margin-bottom: 14px;
@@ -135,28 +153,50 @@ input:focus {
     margin: 0 0 0 15px;
 }
 
-svg {
-    width: 45px;
-    height: 40px;
-}
-
-.register {
+.register,
+.login {
     text-align: center;
     font-weight: 400;
     font-size: 14px;
     margin-top: 10px;
 }
 
-.register a {
+.register a,
+.login a {
     color: #3498db;
     text-decoration: none;
     font-weight: 500;
 }
 
+.register a:hover,
+.login a:hover {
+    text-decoration: underline;
+}
+
 .gyli {
-    border-radius: 100%;
-    background-color: #eaecff;
-    /* border: 2px; */
-    border-color: #000000;
+    width: 45px;
+    height: 45px;
+    outline: none;
+    border-radius: 50%;
+    background-color: #f3f4ff;
+    border: 1px solid;
+    border-color: #d6d6df;
     color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 20px 0 20px 0;
+}
+
+svg {
+    fill: #4e4e4e;
+    width: 25px;
+    height: 25px;
 }
